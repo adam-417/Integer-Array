@@ -1,0 +1,41 @@
+using System;
+
+public class ArraySum
+{
+    public static int SumOfNumbers(int[] arr)
+    {
+        if (arr == null || arr.Length == 0)
+        {
+            return -1;
+        }
+
+        int sum = 0;
+        foreach (int num in arr)
+        {
+            sum += num;
+        }
+        return sum;
+    }
+
+    public static void Main(string[] args)
+    {
+        int[] numbers = new int[] { 0, 1, 2, 3, 4, 5 };
+
+        int sum = SumOfNumbers(numbers);
+
+        Console.WriteLine("Array length: " + numbers.Length);
+
+        if (sum == 1)
+        {
+            Console.WriteLine("\"The total is:\" " + sum);
+        }
+        else if (sum == -1)
+        {
+            Console.WriteLine("\"Cannot add up an empty array\".");
+        }
+        else
+        {
+            Console.WriteLine("The total is: " + sum);
+        }
+    }
+}
